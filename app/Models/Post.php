@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
 
     // メソッドをクラス内に正しく定義
     public function getByLimit(int $limit_count = 4)
