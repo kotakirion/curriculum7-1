@@ -8,6 +8,8 @@ use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
+
+
     public function index(Post $post)
     {
         return view('posts/index')->with(['posts' => $post->getByLimit()]);
@@ -16,6 +18,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('posts.show')->with(['post' =>$post]);
+
     }
     
     public function create()
@@ -43,3 +46,4 @@ class PostController extends Controller
         return redirect ('/posts/' . $post->id);
     }
 }
+
